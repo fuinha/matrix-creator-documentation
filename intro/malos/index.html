@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Malos - Matrix Creator Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Malos";
+    var mkdocs_page_input_path = "Intro/malos.md";
+    var mkdocs_page_url = "/Intro/malos/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Matrix Creator Documentation
+        <img src="http://packages.matrix.one/wiki-images/general-assets/matrix-creator.png" style="width:150px;height:auto;border-radius:0;background-color:inherit;margin:0 auto;"/>
+        </a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hardware</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Hardware/SPI/">SPI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Hardware/Sam3/">Sam3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Hardware/fpga/">Fpga</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Hardware/microphone/">Microphone</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Hardware/sam3mcu-programming/">Sam3mcu programming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Intro</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../hal/">Hal</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Malos</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#matrix-abstraction-layer-for-os">Matrix Abstraction Layer for OS</a></li>
+                
+                    <li><a class="toctree-l4" href="#install-the-most-recent-version">Install the most recent version</a></li>
+                
+                    <li><a class="toctree-l4" href="#running-malos">Running malos</a></li>
+                
+                    <li><a class="toctree-l4" href="#details">Details</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-query-device-list">Example - Query device list</a></li>
+                
+                    <li><a class="toctree-l4" href="#everloop-demo">Everloop demo</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Reference</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Reference/Data-Sheets/">Data Sheets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Reference/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Reference/pinout/">Pinout</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Matrix Creator Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Intro &raquo;</li>
+        
+      
+    
+    <li>Malos</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="matrix-abstraction-layer-for-os">Matrix Abstraction Layer for OS</h1>
+<p>MALOS provides a <a href="http://zeromq.org/">ZeroMQ</a> messaging layer. The intended target for this layer is <a href="http://github.com/matrix-io/matrix-os">MatrixOS</a>.</p>
+<p><a href="http://matrix-io.github.io/matrix-documentation/">MATRIX OS ecosystem documentation ( CLI, API and Widget Configuration )</a></p>
+<h2 id="install-the-most-recent-version">Install the most recent version</h2>
+<p>To use it make sure that you have the most recent version installed:</p>
+<pre><code>apt-get update
+apt-get install matrix-creator-malos
+</code></pre>
+<h2 id="running-malos">Running malos</h2>
+<p>And then run it. You should see an output like the following one:</p>
+<pre><code>$ malos
+**************
+MALOS starting
+**************
+
+You can query specific driver info using port 20012.
+Registered driver IMU with port 20013.
+Registered driver Humidity with port 20017.
+Registered driver Everloop with port 20021.
+</code></pre>
+<h2 id="details">Details</h2>
+<p>MALOS gives you direct access to the hardware devices, and each device has four ZeroMQ (ZMQ) sockets:</p>
+<ol>
+<li>Base port (for instance 20013). ZMQ PULL channel used for device configuration (if configuration is required, most devices have a default configuration).</li>
+<li>(base_port + 1) is used as a keep-alive channel. This channel is used to tell the driver that it should keep sending updates to MATRIX OS. Each driver has a configurable time interval that tells it how often it should expect keep-alive messages. If an amount of time bigger than the interval elapses without keepalives, the driver will stop sending updates.</li>
+<li>(base_port + 2) is used as error channel. ZMQ PUSH. If an error occurs, it will be sent in this channel.</li>
+<li>(base_port + 3) is used to send device updates. ZMQ PUSH. Clients will normally listen on this port for updates.</li>
+</ol>
+<p>It's important to note that <strong>more than one program</strong> can subscribe to the <strong>error channel</strong> and the <strong>device updates channel</strong>. This is achieved thanks to the PUB/SUB model of ZMQ.</p>
+<p>In this <a href="https://github.com/matrix-io/matrix-creator-malos/blob/master/src/js_test/test_imu.js">Node.js example</a> you can see all the channels used. If you want to run it you need to edit the IP address (and maybe the port depending on the device base-port mapping.</p>
+<h2 id="example-query-device-list">Example - Query device list</h2>
+<p>This <a href="https://github.com/matrix-io/matrix-creator-malos/blob/master/src/js_test/test_driver_info.js">Node.js example</a> shows how you can query the device list and some capabilities. This program uses a ZMQ RPC call.</p>
+<p>To run the file, you need to edit the <code>creator_ip</code> to match the IP of the Raspberry PI and the first port printed when the command malos is started (20012 in the sample session shown above).</p>
+<p>This is what the output looks like:</p>
+<pre><code>$ nodejs test_driver_info.js
+{ info:
+   [ { driver_name: 'IMU',
+       base_port: 20013,
+       provides_updates: true,
+       delay_between_updates: 1000,
+       needs_pings: true,
+       timeout_after_last_ping: 5000,
+       notes_for_human: 'Provides yaw/pitch/roll. Check Imu message (protocol buffer)' },
+     { driver_name: 'Humidity',
+       base_port: 20017,
+       provides_updates: true,
+       delay_between_updates: 1000,
+       needs_pings: true,
+       timeout_after_last_ping: 5000,
+       notes_for_human: 'Provides humidity and temperature. Check Humidity message (protocol buffer)' },
+     { driver_name: 'Everloop',
+       base_port: 20021,
+       provides_updates: false,
+       delay_between_updates: 1000,
+       needs_pings: false,
+       timeout_after_last_ping: 5000,
+       notes_for_human: 'Write-only. There are 35 leds. Values range from 0 to 255. Check message EverloopImage (protocol buffer)' } ] }
+</code></pre>
+<h2 id="everloop-demo">Everloop demo</h2>
+<p>Once MALOS is operational, you can run the <a href="https://github.com/matrix-io/matrix-creator-malos/blob/master/src/js_test/test_everloop.js">Everloop LED array demo</a>. Remember to edit the IP address of your Raspberry PI.</p>
+<p>For the impatient, here is a video of what this demo does: <a href="https://youtu.be/b0n2-hzFgcY">https://youtu.be/b0n2-hzFgcY</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Reference/Data-Sheets/" class="btn btn-neutral float-right" title="Data Sheets">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install/" class="btn btn-neutral" title="Install"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Reference/Data-Sheets/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
